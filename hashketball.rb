@@ -1,3 +1,5 @@
+require 'pry'
+
 def game_hash
   game_hash = {
     :home => {
@@ -113,5 +115,14 @@ def game_hash
       }
     }
   }
+end
 
+def num_points_scored(players_name)
+  if game_hash[:home][:players].include?(players_name)
+    player = game_hash[:home][:players][players_name][:points]
+  else
+    player = game_hash[:away][:players][players_name][:points]
+  end
+  player.to_i
+  # binding.pry
 end
