@@ -194,12 +194,12 @@ end
 
 #find the player with the biggest shoe size
 #return that player's number of rebounds
-def big_shoe_rebounds
-  all_players.each do |name, stats|
-    name = all_players[key]
-  all_players[name][:shoe]
-end
-end
+# def big_shoe_rebounds
+#   all_players.each do |name, stats|
+#     name = all_players[key]
+#   all_players[name][:shoe]
+# end
+# end
 
 
 
