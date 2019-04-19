@@ -184,15 +184,22 @@ def player_stats(name)
   end
 end
 
-Def all_players
+def all_players
 all = game_hash[:home][:players]
 	game_hash[:away][:players].each do |key, value|
 		all[key] = value
 	end
 all
 end
-binding.pry
+
+
+def player_biggest_shoe_size
+  (all_players).max_by{|player, stats| stats.fetch(:shoe)}[1]
+end
+
+
 #find the player with the biggest shoe size
 #return that player's number of rebounds
 def big_shoe_rebounds
+player_biggest_shoe_size[:rebounds]
 end
